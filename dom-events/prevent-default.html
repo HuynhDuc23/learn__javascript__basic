@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default</title>
+</head>
+<body>
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">W3S</a>
+     <br>
+     <a href="https://chat.openai.com/c/fdcb10a6-a8f3-4d64-acac-74a0bfbeeeab">GPT</a>
+    <script>
+        const aElements =  document.querySelectorAll('a');
+        console.log(aElements);
+
+        for(var i = 0 ; i <aElements.length ;i++){
+            aElements[i].onclick =  function(e){
+                console.log(e);
+                if(!e.target.href.startsWith("https://www.w3schools.com/jsref/dom_obj_event.asp")){
+                    e.preventDefault();
+                    console.log("Ngăn Chặn Hành Vi Mặc Định")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các Loại Hàm</title>
+</head>
+<body>
+    <script>
+        myFunction();
+        // Hàm tự định nghĩa
+        // có tính hosting : có thể gọi trước khi định nghĩa hoặc sau khi định nghĩa
+        function myFunction(){
+            console.log(10);
+        }
+        myFunction();
+    </script>
+
+    <script>
+        // Hàm biểu thức
+        // không có tính hosting
+        // console.log(resultCheck); -> undefined
+        var resultCheck = function(){
+            console.log("Ok");
+        }
+        console.log(resultCheck);
+        
+        
+    </script>
+    <script>
+        // arrow function
+        var result = (...args) => {
+            let sum  =  0 ;
+            for(items of args){
+                if(items % 2 ==0){
+                    sum+=items;
+                }
+            }
+            return sum ;
+        }
+        let ketQua =  result(1,2,3,4,5,6,7,8,9,10)
+
+    </script>
+</body>
+</html>

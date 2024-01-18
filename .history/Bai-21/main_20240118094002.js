@@ -1,0 +1,28 @@
+console.log(a);
+var a =  10;
+
+console.log(sumTwoNumber(2,3));
+function sumTwoNumber (a,b){
+    return a + b ;
+}
+
+console.log(number);
+if(true){
+    var number = 1 ;
+}
+console.log(number);
+
+console.log(isCheck())
+
+function isCheck(){
+    return 1;
+}
+
+console.log(isFunction())
+var isFunction =  ()=> {
+    return 1 ;
+}
+
+
+
+

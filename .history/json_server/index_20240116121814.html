@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="block-element"></ul>
+</body>
+<script>
+    const apiCourses = 'http://localhost:3000/courses';
+    fetch(apiCourses)
+        .then((response) => {
+            return response.json();
+        })
+    then((data) => {
+        var htmls = data.map((item) => {
+            return `
+            <li>
+                <h2>${item.name}</h2>
+                <p>${item.description}</p>
+            </li>`
+        });
+        var html = htmls.join('');
+        document.querySelector('.block-element').innerHTML = html;
+    })
+
+</script>
+
+</html>

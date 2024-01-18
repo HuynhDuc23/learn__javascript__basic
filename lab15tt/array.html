@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hello World</h3>
+     <script>
+        // array có thể lưu nhiều kiểu dữ liệu khác nhau
+        // string , object , number ...
+        var listsStudent = [
+            "Trần Vũ Huỳnh Đức",
+            "Trần Anh Đông" ,
+            "Trần Anh Tuấn" ,
+            "Trần Quốc Chiến",
+           
+        ];
+        // console.log( typeof listsStudent[listsStudent.length-2])
+        var lists =  listsStudent.toString();
+        console.log(lists);
+        console.log(lists.split(","));
+        console.log(lists.slice(0,4).toUpperCase().charAt(0));
+
+        // Join(seperator) - > array -> tring
+        console.log(listsStudent.join(",").split(","))
+        console.log(listsStudent.join(" - "))
+
+        // pop : xóa phần tử ở cuối và sau đó in ra phần tử đã xóa
+        var listItems = [
+            "Item1",
+            "Item2",
+            "Item3",
+            "Item4"
+        ];
+        console.log(listItems.pop());
+        console.log(listItems);
+
+        // push() : thêm phần tử vào cuối mảng -> trả về đội dài mới sau khi thêm
+        console.log(listItems.push("Item4"));
+        console.log(listItems)
+        // shift() : xóa phần tử đầu tiên trong mảng và sau đó in phần tử bị xóa
+        console.log(listItems.shift());
+        console.log(listItems)
+
+        // unShift() : thêm một hoặc nhiều phần tử vào đầu và trả về độ dài mới
+        console.log(listItems.unshift("HTML","CSS"));
+        console.log(listItems.join("-").split("-"));
+
+        // splice() : xóa hoặc chèn phần tử . Trả về mảng bị xóa
+        var lists = [
+            "Toán",
+            "Lý",
+            "Hóa",
+            "Anh",
+            "Văn"
+        ];
+        
+        console.log(lists.splice(1,0,"Sinh"));
+        console.log(lists) ;
+        // -> Luôn trả về mảng 
+        // xóa
+        console.log(lists.splice(1,1));
+        // chèn
+        console.log(lists.splice(1,0,"Sinh","Anh Ngữ"))
+        console.log(lists) ;
+
+
+        // concat() : nối 2 array không làm ảnh hưởng mảng ban đầu
+        var listsPlayer=[
+            "Ronaldo",
+            "Messi",
+            "Neymar"
+        ]
+        var listsPlayer2=[
+            "BenU",
+            "Cris"
+        ]
+        // Tuy không lối nhưng nó đè sau lên trước nếu 2 mảng như nhau
+        console.log(listsPlayer.concat(listsPlayer2));
+        // không ảnh hưởng đến mảng ban đầu
+        console.log(listsPlayer);
+        var lists =  listsPlayer.concat(listsPlayer2).toString();
+        console.log(lists)
+        console.log(lists.indexOf("BenU",0))
+
+        // slice() : dùng để cắt phần tử và không ảnh hưởng đến chuỗi ban đầu 
+        // không bảo gồm phần từ cuối
+        // 1-4 -> từ 1 cho đến 3
+        var listsNewItem =  listsPlayer.slice(1,3);
+        // ["messi","neymar"]
+        console.log(listsNewItem)
+
+     </script>
+</body>
+</html>

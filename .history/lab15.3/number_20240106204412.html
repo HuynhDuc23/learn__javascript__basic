@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number In Javascript</title>
+</head>
+<body>
+    <h3>Hello World!</h3>
+    <script>
+        var a = 10 ;
+        var b = "abc";
+        var result = a /b ;
+        console.log(result);
+        if(isNaN(result)){
+            console.log("Đây là kiểu dữ liệu NaN")
+        }
+        else {
+            console.log("Đây không là kiểu dữ liệu NaN")
+        }
+
+    // Chuyển to number -> string -> toString()
+    var a =  10 ;
+    console.log(a) ;
+    console.log(typeof a);
+    var b =  a.toString();
+    console.log(b);
+    console.log(typeof b);
+
+   
+    // to fixed 
+    var numberA =  12.34679 ;
+    console.log(numberA.toFixed(34))
+    console.log(typeof numberA)
+
+    </script>
+</body>
+</html>

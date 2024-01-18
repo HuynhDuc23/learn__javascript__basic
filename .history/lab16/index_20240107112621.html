@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 16 Function - Arr - Obj</title>
+</head>
+<body>
+    <script>
+        // Đối tượng argument
+        function sum(){
+            let tinh = 0 ;
+           for(item of arguments){
+                tinh+=item ;
+           }
+           return tinh ;
+        };
+        var result =  sum(10,20,60);
+    </script>
+</body>
+</html>

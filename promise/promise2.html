@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-Resolve-Reject</title>
+</head>
+<body>
+    <script>
+        const promise1 =  new Promise((resolve,reject)=>{
+            let conđition = true ;
+            if(conđition){
+                resolve('Sucess!');
+            }
+            else{
+                reject1('Error!')
+            }
+        });
+        promise1.then(
+            data=>{
+                console.log(data);
+            }
+        ).catch(
+            data => {
+                console.log(data);
+            }
+        )
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 16 Function - Arr - Obj</title>
+</head>
+<body>
+    <script>
+        // Đối tượng argument
+        // Chỉ sử dụng trong hàm 
+        // nó sẽ lưu tất cả các đối số truyền vào trong dưới dạng mảng 
+        function sum(){
+           let tinh = 0 ;
+           for(item of arguments){
+                tinh+=item ;
+           }
+           return tinh ;
+        };
+        var result =  sum(10,20,60);
+        console.log(result)
+    </script>
+    <script>
+        // trong if else thì dùng var nó có thể truy cập thoải mái
+        if(true){
+            var a =  10 ;
+            console.log(10);
+        }
+        console.log(a);
+       
+    </script>
+    <script>
+        for(var i = 0 ; i < 2 ; i++){
+             var result = i ;
+        }
+        console.log(result);
+    </script>
+    <script>
+        // function trong function
+        function myFunction(){
+            var a  =  "Huỳnh Đức" ;
+            console.log(a);
+            function myFunctionB(){
+                console.log(20);
+            }
+            myFunctionB();
+        }
+        myFunction();
+       
+    </script>
+</body>
+</html>

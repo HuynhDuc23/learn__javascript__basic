@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String in Javascript v</title>
+</head>
+<body>
+    
+
+    <script>
+        // length
+        var myString =`Xin Chào Tất Cả Các Bạn `
+        console.log(typeof myString.length)
+        // indexOf() : Trả về vị trí tìm được
+        var myString2 = "Trần Vũ Huỳnh Đức Trần";
+        console.log(myString2.length)
+        // console.log(myString2.indexOf("Trần",1))
+        console.log(myString2.lastIndexOf("Trần",35))
+        // từ 35 -> 35-- đến chữ T (Trần) : ra được vị trí
+
+
+        // slice(): cất chuỗi : cắt tới vị trí kế cuối
+        var stringSlice = "Trần Vũ Huỳnh Đức";
+        console.log(stringSlice.slice(0,1))
+    </script>
+</body>
+</html>

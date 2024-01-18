@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .test-css{
+        color: red;
+        background-color: tan;
+    }
+</style>
+<body>
+     <!-- <h1 class="test-css" id="id">Hello World</h1>
+     <h1 class="test-css" id="id">Hello World11</h1>
+     <p>Đây Là Đoạn Giới Thiệu </p>
+     <ul>
+        <li>li1</li>
+        <li>li2</li>
+     </ul> -->
+     <style>
+        .css-h2{
+            color: yellow;
+        }
+        .css-test-h2{
+            background-color: red;
+        }
+        #h2{
+            color: yellow;
+        }
+        div ul li.test {
+            color: red;
+            background-color: black;
+            display: inline;
+        }
+        .test {
+            background-color: red;
+            color: yellow;
+        }
+     </style>
+     <p class="test" id-product="12345">Đây là bài văn hay nhất tôi từng nghe nhé hii           </p>
+
+     <!-- <h2>Đây là thẻ h2 1</h2>
+     <h2>Đây là thẻ h2 2</h2>
+     <h2>Đây là thẻ h2 3</h2>
+     <h2>Đây là thẻ h2 4</h2>
+     <h2>Đây là thẻ h2 5</h2> -->
+
+
+     <!-- <h3 class="test">Đây là Thẻ H3</h3>
+     <h4 class="test">Đây là Thẻ H4</h4>
+     <h5 class="test">Đây là Thẻ H5</h5>
+     <h6 class="test">Đây là Thẻ H6</h6>
+     <h1 class="test">Đây là Thẻ H1</h1> -->
+     <!-- <h2 class="test_h2" id="h2">Trần Vũ Huỳnh Đức 1</h2>
+     <h2 class="test_h2" id="h2">Trần Vũ Huỳnh Đức 2</h2> -->
+<!-- 
+     <div>
+        <ul>
+            <li class="test">1</li>
+            <li class="test">2</li>
+            <li class="test">3</li>
+            <li class="test">4</li>
+        </ul>
+     </div>
+     <li class="test">5</li> -->
+    <!-- <script>
+      var element =  window.document.getElementById("id");
+    //   document.write(element);
+      console.log(element)
+      // Vì lấy thẻ theo id nên thẻ này là duy nhất
+    </script>
+    <script>
+
+        // tìm kiếm theo tag name
+        const listH2 = window.document.getElementsByTagName("h2");
+        console.log(listH2);
+        console.log(listH2[0]);
+        [...listH2].forEach(item=>{
+            item.classList.add("css-h2");
+            console.log(item);
+            item.classList.remove("css-h2");
+            console.log(item)
+
+        })
+    </script>
+    <script>
+           var listHeading =  window.document.getElementsByClassName("test");
+           console.log(listHeading);
+           [...listHeading].forEach((item)=>{
+            item.classList.add("test-css");
+            console.log(item)
+           })
+    </script> -->
+
+    <script>
+        //  var nodeH2 = window.document.querySelector("#h2");
+        //  console.log(nodeH2);
+        //  console.log(nodeH2.classList.add("css-test-h2"));
+        //  console.log(nodeH2.classList)
+    </script>
+    <!-- <script>
+        var listLi = document.querySelectorAll("div ul li.test");
+        console.log(listLi)
+    </script> -->
+    <!-- <script>
+        var objP = window.document.querySelector("p");
+        objP.innerHTML="<strong> ok</strong>"
+        console.log(objP.innerHTML);
+        console.log(objP.innerText)
+    </script> -->
+<!-- <script>
+    var obj = window.document.querySelector("p");
+    console.log(obj.innerHTML.length)
+    console.log(obj.innerText.length)
+</script> -->
+<script>
+    var p = window.document.querySelector("p");
+    console.log(p.classList);
+    console.log(p.getAttribute("id-product"));
+    p.setAttribute("id-product","123456789");
+    console.log(p);
+    console.log(p.getAttribute("class"));
+    console.log(p.setAttribute("class",""));
+    console.log(p)
+
+    p.style.color='red';
+    p.style.backgroundColor='red';
+    console.log(p.getAttribute("style"));
+    console.log(p.setAttribute("style",""));
+    
+</script>
+
+
+
+</body>
+</html>

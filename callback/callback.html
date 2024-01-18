@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Back</title>
+  </head>
+  <body>
+    <h1 style="color: red">CallBack</h1>
+    <script>
+        
+        Array.prototype.map2 =  function(callback){
+          var arrayCallback = [];
+          for(var i = 0 ; i < this.length ; i++){
+            var result = callback(this[i]);
+            console.log(result);
+            arrayCallback.push(result);
+          }
+          return arrayCallback;
+        }
+      var courses =  [
+        'PHP',
+        'JAVA',
+        'RS'
+      ];
+      var htmls = courses.map2(function(courses){
+          return '<h2>${course}</h2>';
+      });
+
+
+      Array.prototype.forEach2 =  function(callback){
+        for(var i = 0 ; i < this.length ;i++){
+          console.log(this[i])
+        }
+      }
+
+      courses.forEach2(function(course){
+        console.log(course);
+      })
+
+       let arrayNumber = [
+             1,4,5,6,7
+      ];
+       
+   
+
+     
+      var listNumber =  [
+        1,2,3,4,5,1
+      ];
+
+      Array.prototype.f2 = function(callback){
+         
+         if((typeof callback )=='function'){
+            var result = [];
+            for(var i = 0 ; i <this.length ;i++){
+               if(callback(this[i])){
+                result.push(this[i]);
+                break;
+               }
+            }
+            
+            return result;
+
+         }
+      }
+      var result = listNumber.f2(function(number){
+        return number % 2 ===0;
+      });
+      console.log(result);
+
+
+
+      var listNumber2  = [
+        1,23,4,5,6
+      ];
+
+       Array.prototype.filter2 = function(callback){
+         var results =  [];
+         if((typeof callback)== 'function'){
+          for(var i = 0 ; i < this.length ;i++){
+             if(callback(this[i])){
+              results.push(this[i]);
+             }
+         }
+         }
+         return results ;
+       }
+
+      var results = listNumber2.filter2(function(item){
+        return item % 2===0 ;
+      });
+      console.log(results);
+
+      
+    </script>
+  </body>
+</html>

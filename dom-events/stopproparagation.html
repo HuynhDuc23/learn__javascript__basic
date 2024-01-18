@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Stop - Propagation ( Ngăn Chăn Hành Vi Nổi Bột)</title>
+</head>
+<body>
+    <div class="test">
+        DIV
+        <button class="button">Submit</button>
+    </div>
+    <script>
+      const divElements =  document.querySelector('.test');
+      divElements.onclick =  function(e){
+        console.log(e);
+        console.log(e.target)
+      }
+
+
+      const buttonElement =  document.querySelector('.button');
+    //   console.log(buttonElement);
+
+      buttonElement.onclick = function(e){
+         e.stopPropagation()
+        console.log(e.target);
+      }
+    </script>
+</body>
+</html>

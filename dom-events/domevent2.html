@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text">
+     <input type="checkbox">
+     <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+     </select>
+    <script>
+          const inputElement = document.querySelector('input[type="text"]');
+          console.log(inputElement);
+
+          inputElement.onkeyup =  function (e){
+            console.log(e.target.value);
+          };
+          const checkboxElement =  document.querySelector(
+            'input[type="checkbox"]'
+          );
+          console.log(checkboxElement);
+
+          checkboxElement.onclick = function(e){
+             console.log(e.target.checked);
+          }
+          const selectElement = document.querySelector('select');
+          selectElement.onchange = function(e){
+            console.log(e.target.value);
+          }
+          document.onclick = function(e){
+            console.log(e.target)
+          }
+      
+          
+    </script>
+</body>
+</html>

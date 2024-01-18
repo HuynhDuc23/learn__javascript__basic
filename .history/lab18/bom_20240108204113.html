@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM IN JAVASCRIPT 2024</title>
+</head>
+<body>
+    <h3>Hello World!</h3>
+    <button onclick="openTab()"> Mở Tab</button>
+    <button onclick="closeTab()">Đóng Tab</button>
+    <script>
+      console.log(window.innerHeight);
+      console.log(window.innerWidth);
+      // hiển thị ra chiều cao và rộng của trình duyệt
+
+      // mở tab
+      var check ;
+      function openTab(){
+        check = window.open("https://28tech.com.vn/lap-trinh-java-va-sql.html","_balnk","width=200,height=300,top=50,left=50")
+      }
+      // đóng tab
+      function closeTab(){
+        check.close();
+      }
+      // window.location.href
+      var time = window.location.href ;
+      setTimeout(()=>{
+           console.log(time);
+           // sau 5s gửi lượng truy cập lên server
+      },5000)
+    </script>
+</body>
+</html>

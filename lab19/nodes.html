@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Nodes</title>
+</head>
+<body>
+    <div id="div">
+        <ul id="ul">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+
+    <script>
+        const div =  document.querySelector("#div");
+        var nodeNew =  document.createElement("p");
+        console.log(nodeNew);
+        nodeNew.innerHTML="Đây Là Một Node Mới";
+        div.appendChild(nodeNew);
+        
+        const ulFind =  document.querySelector("#ul");
+        console.log(ulFind);
+
+        const nodeNew2 =  document.createElement("p");
+        nodeNew2.innerHTML="test";
+        const ul =  ulFind.firstElementChild;
+        console.log(ulFind.insertBefore(nodeNew2,ul));
+        console.log("---------")
+        var globalNode =  document.querySelector("#ul").firstElementChild
+        var parentNode =  document.querySelector("#ul");
+         parentNode.removeChild(globalNode);
+        console.log(parentNode);
+        
+    </script>
+</body>
+</html>

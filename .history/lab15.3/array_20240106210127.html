@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hello World</h3>
+     <script>
+        // array có thể lưu nhiều kiểu dữ liệu khác nhau
+        // string , object , number ...
+        var listsStudent = [
+            "Trần Vũ Huỳnh Đức",
+            "Trần Anh Đông" ,
+            "Trần Anh Tuấn" ,
+            "Trần Quốc Chiến",
+           
+        ];
+        // console.log( typeof listsStudent[listsStudent.length-2])
+        var lists =  listsStudent.toString();
+        console.log(lists);
+        console.log(lists.split(","));
+        console.log(lists.slice(0,4).toUpperCase().charAt(0));
+
+        // Join(seperator) - > array -> tring
+        console.log(listsStudent.join(",").split(","))
+        console.log(listsStudent.join(" - "))
+
+        // pop , push
+        var listItems = [
+            "Item1",
+            "Item2",
+            "Item3",
+            "Item4"
+        ];
+        console.log(listItems.pop());
+        console.log(listItems)
+     </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tiếp Theo</title>
+</head>
+<body>
+    <button id="button">Button</button> 
+
+ <script>
+        function ham1(){
+            console.log("Việc 1")
+        }
+       var action =  function (){
+            console.log("Việc 2");
+        }
+        const  button12 =  window.document.querySelector("#button");
+        console.log(button12)
+        button12.onclick =function(){
+              ham1();
+              
+        };
+        button12.onclick = action ;
+
+    </script> -->
+    <button id="button2">Button2</button>
+
+    <script>
+        
+       var action =  function (){
+            console.log("Việc 1");
+        }
+       var action2 = function (){
+            console.log("Việc 2")
+        }
+
+        const button1 = document.querySelector("#button2");
+        console.log(button1)
+        button1.addEventListener("click",action);
+        button1.addEventListener("click",action2);
+
+        // remove 
+        setTimeout(()=>{
+            button1.removeEventListener("click",action2)
+        },5000)
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function tinhTong(number){
+            let sum = 0 ;
+            for(var i =1 ; i <=number ;i++){
+                sum += (i/number)
+            }
+            return sum ;
+        }
+       
+        var a ;
+        do {
+            a =  prompt("Nhập a :");
+            // Nếu Nhập không phải dạng só chữ-> 0
+            a = parseInt(a);
+            console.log(typeof a);
+            if(a<=0 ){
+                console.log("Vui Lòng Nhập Lại");
+            }
+            else{
+                console.log(tinhTong(a));
+            }
+        } while (a<=0);
+
+        
+    </script> -->
+    <script>
+        var arrayNumber = [
+            "Trần Vũ Huỳnh Đức",
+            "Trần Anh Đông",
+             "Trần Vũ"
+        ];
+        arrayNumber.name = "Trần";
+        console.log(arrayNumber[1]);
+        arrayNumber.speed = function(){
+            console.log("Tốc Độ 2 Ngàn")
+        }
+        console.log(arrayNumber.speed())
+    </script>
+</body>
+</html>

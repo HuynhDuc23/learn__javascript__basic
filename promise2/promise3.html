@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise In JavaScript</title>
+</head>
+<body>
+    <script>
+
+        var promise =  new Promise((resolve1,reject)=>{
+            resolve1('Successfully');
+        });
+        promise.then((result)=>{
+            console.log('result :',result);
+            return result ;
+            // Nếu return về Promise thì nó phải chờ xử lý xong 
+        })
+        .then((data)=>{
+            console.log('data:', data);
+        })
+    </script>
+</body>
+</html>

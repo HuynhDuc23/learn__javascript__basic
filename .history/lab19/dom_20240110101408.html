@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        .light {
+            background: red;
+        }
+        .dark {
+            background: green;
+            color: brown;
+        }
+        .test {
+             color : red;
+        }
+    </style>
+   <div class="light" id="box"> Hello</div>
+     <ul id="_ul">
+        <li>Bài 1 </li>
+        <li>Bài 2 </li>
+        <li>Bài 3 </li>
+     </ul>
+     <h2>Đây Là Thẻ H2 01</h2>
+     <h2>Đây Là Thẻ H2 02</h2>
+     <h2>Đây Là Thẻ H2 03</h2>
+     <h2>Đây Là Thẻ H2 04</h2>
+     <h2>Đây Là Thẻ H2 05</h2>
+
+
+      <h1 class="test">Đây Là Thẻ H1</h1>
+      <h6 class="test">Đây Là Thẻ H6</h6>
+      <h5 class="test">Đây Là Thẻ h5</h5>
+    <script>
+       var box = document.getElementById("box");
+       console.log(box)
+       box.classList.add("dark");
+
+       const _ul =  document.getElementById("_ul");
+       _ul.classList.add("dark");
+       console.log(_ul);
+
+       const listH2 =  document.getElementsByTagName("h2");
+       console.log(listH2);
+       listH2[0].classList.add("dark");
+       listH2[3].classList.add("dark");
+
+       const listTest =  document.getElementsByClassName("test");
+       console.log(listTest);
+       // Hiện tại đang HTML collection-> lấy từng phần tử
+       // eletment ra và chuyển nó vô array
+       
+       [...listTest].forEach((item)=>{
+             item.classList.add("test-css")
+       },)
+
+    </script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

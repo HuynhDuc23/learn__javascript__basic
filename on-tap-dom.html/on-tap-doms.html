@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÔN TẬP DOM</title>
+  </head>
+
+  <body>
+    <ul></ul>
+    <script>
+      function render(html) {
+        const ul = document.querySelector("ul");
+        console.log(ul);
+        ul.innerHTML = html;
+      }
+
+      render(`
+     <li>Khóa học HTML</li>
+     <li>Khóa học JS</li>
+     <li>Khóa học PHP</li>
+   `);
+    </script>
+  </body>
+</html>

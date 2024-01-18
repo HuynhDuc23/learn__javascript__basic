@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Navigation</title>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="child1">
+            <ul id="siblings">
+                <li>Đây Là li 1</li>
+                <li>Đây Là li 2</li>
+                <li>Đây Là li 3</li>
+                <li>Đây Là li 4</li>
+            </ul>
+            <h2 id="h2">
+                ok
+            </h2>
+        </div>
+        <div id="child2">
+            <h2 id="child-h2">Xin Chào</h2>
+            <p id="child-p">Đoạn Văn Ngắn</p>
+        </div>
+    </div>
+
+    <script>
+        const itemChild = document.querySelector("#siblings");
+        console.log(itemChild);
+        console.log(itemChild.querySelectorAll("li"))
+        itemChild.querySelectorAll("li").forEach(items => {
+            console.log(items);
+        });
+        const parent = document.querySelector("#child1");
+        console.log(parent);
+        console.log(parent.parentNode);
+
+        const parentNew = document.querySelector("#child1");
+        console.log(parentNew);
+
+        console.log(parentNew.childNodes)
+        // Vấn coi test là một node
+
+
+        console.log(parentNew.firstElementChild);
+        console.log(parentNew.lastElementChild)
+        console.log(parentNew.nodeName);
+
+        console.log(parentNew.nextElementSibling)
+
+    </script>
+</body>
+
+</html>

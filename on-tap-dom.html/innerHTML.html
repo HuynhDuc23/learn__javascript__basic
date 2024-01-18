@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerHTML</title>
+  </head>
+  <body>
+    <!-- <ul class="courses-list"></ul> -->
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <script>
+    //   var courses = ["HTML & CSS", "Javascript", "PHP", "Java"];
+
+    //   function render(courses) {
+    //      var list = courses.map((item)=>{
+    //          return '<li>' + item + '</li>';
+    //      });
+    //      var listNew  = list.join('');
+    //      document.querySelector(".courses-list").innerHTML=listNew;
+    //   };
+    //    console.log(document.querySelector(".courses-list").nodeType);
+    const lists =  document.querySelectorAll("div");
+    console.log(lists);
+    for(let i =0 ; i < lists.length ;i++){
+       lists[i].classList.add("box");
+    //    console.log(lists[i]);
+    }
+
+    //  render(courses);
+    </script>
+  </body>
+</html>

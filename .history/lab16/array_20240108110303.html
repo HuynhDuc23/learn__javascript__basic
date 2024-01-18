@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hello World!</h3>
+    
+    <script>
+         let arr = [1,2,3,4,5,6,7];
+         let results = 0 ;
+         arr.forEach(function(number,index,array){
+            results+=number;
+            arr[index] = 20 ;
+          //  arr[index] = 20 ; -> OK
+         });
+         console.log(arr)
+         console.log(results);
+         // forEach() : sử dụng callback để duyệt qua từng phần tử và thực hiện một hành động nào đó và có
+         // thể làm thay đổi 1 hành động
+    </script>
+    <script>
+        // every() : check tất cả cả các items thoải mãn -> true ngược lại else
+        var listStudent=[
+            {
+                name : "Trần Vũ Huỳnh Đức",
+                point : 8 
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 2 ",
+                point : 7 
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 3",
+                point : 8.9 
+            },
+        ];
+        let check = listStudent.every(function(item , index , array){
+               return item.point > 8 ;
+        });
+        if(check){
+            console.log("Tất Cả Học Sinh Trong Lớp Là Học Sinh Giỏi")
+        }
+        else {
+            console.log("Lớp Tất Cả Không Phải Là Học Sinh Giỏi")
+        }
+    </script>
+    <script>
+        // some() : Kiểm Tra Chỉ Cần 1 item trong mảng thoải mảng 1 điều điều kiện thì sẽ trả về true   
+    </script>
+    <script>
+        // find() : tìm kiếm
+        var listStudent = [
+            {
+                name : "Trần Vũ Huỳnh Đức",
+                age : 16
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức",
+                age : 15
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 2",
+                age : 14
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 3",
+                age : 12
+            }
+        ];
+        var result =  listStudent.find(function(item, index,arr){
+            console.log(index);
+            return item.name == "Trần Vũ Huỳnh Đức"
+        });
+        console.log(result); // Trả về Obj
+        if(result){
+            console.log("Tìm Thấy Kết Quả")
+        }
+        else{
+            console.log("Không tìm thấy kết quả")
+        }
+        
+    </script>
+    
+    <script>
+        // In ra danh sách 18 -> "Lớn 18", 
+        // < 18 : -> "Nhỏ 18"
+        var listName = [
+            {
+                name : "Trần Vũ Huỳnh Đức",
+                age : 19
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 2",
+                age : 13
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 3",
+                age : 15
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 4",
+                age : 14
+            }
+        ];
+        let lists = listName.map((item)=>{
+            let check = "";
+            if(item.age>18){
+                check="Lớn 18";
+            }
+            else {
+                check="Nhỏ 18";
+            }
+            return {
+                name :item.name ,
+                check : check
+            }
+            // Kết Quả Cuối khi không dùng map phu thuộc và return
+        });
+        console.log(listName);
+        console.log(lists);
+        // Kết quả map() : value  phụ thuộc vào return 
+    </script>
+
+    <script>
+        // filter() : lọc 
+        var listName = [
+            {
+                name : "Trần Vũ Huỳnh Đức",
+                age : 19
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 2",
+                age : 13
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 3",
+                age : 15
+            },
+            {
+                name : "Trần Vũ Huỳnh Đức 4",
+                age : 19
+            }
+        ];
+        var kiemTra = listName.filter((item)=>{
+             if(item.age == 19){
+               console.log("OK");
+               return {
+                name :"OK"
+               }
+             }
+        }
+        );
+        console.log(kiemTra)
+    </script>
+
+    <script>
+        // reduce() : lọc qua từng phần tử và thực hiện tính toán và trả về giá trị cuối cùng 
+        var listsNumber = [1,2,3,4,5,6,7,8,9];
+        var result = listsNumber.reduce((total,item)=>{
+               console.log(total)
+               // total = 0 
+               return total + item ;
+        },0);
+        // Nếu Không khỏi tạo giá trị đầu tiền thì mặc nhiên sẽ lấy item đầu tiên trong mảng (obj, number,string)
+        console.log(result)
+
+        var resultAvg =  listsNumber.reduce((total,item)=>{
+             return total + item/listsNumber.length;
+             // 0 +  1/10
+             // ....
+             // (0+1/10) + 2/10
+             // ((0+1/10) + 2/10)+3/10
+             //....
+        },0);
+
+        
+        console.log("Result");
+        console.log(resultAvg)
+    </script>
+
+<script>
+    
+</script>
+</body>
+</html>

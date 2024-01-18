@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EVENT</title>
+</head>
+<style>
+    button {
+    background-color: #f05123;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: none;
+}
+</style>
+<body>
+    <button>
+        submit
+    </button>
+    <script>
+        const buttonElement = document.querySelector
+        ('button');
+        // console.log(buttonElement);
+        buttonElement.onclick = function(e){
+            // mouse event
+            // e.target.style.color='#fff';
+            buttonElement.style.color='#fff'
+        }
+        
+    </script>
+</body>
+</html>
